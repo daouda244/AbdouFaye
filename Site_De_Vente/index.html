@@ -1,554 +1,1335 @@
+
+(c) Microsoft Corporation. Tous droits réservés.
+
+C:\Users\diakh>curl https://www.votrechauffeur.ma/
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <!-- Debut Lien Bootstrap 5 css et js -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Fin Lien Bootstrap 5 css et js  -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Shop Homepage - Start Bootstrap Template</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-         <!-- Lien CDN pour les icônes Bootstrap -->
-         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body style="background-color: #a10ca1;">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">FAQ</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Qui sommes nous</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">All Products</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Homme</a></li>
-                                <li><a class="dropdown-item" href="#!">Femme</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
-                    </form>
+<html lang="fr"  ng-app="VtcApp">
+<head>
+    <meta name="facebook-domain-verification" content="bzjnqbor4pree42t8v1ejlcdf26piu" />
+    <link rel="shortcut icon" href="https://votrechauffeur.ma/assets/images/chaffeur_icon.png" />
+<!--<meta http-equiv="content-language" content="fr-FR">-->
+<meta name="language" content="fr-FR">
+<title>VotreChauffeur.ma - Réservation de chauffeurs privés au Maroc</title>
+<meta property="og:description" content="VotreChauffeur.ma est un service qui vous permet de profiter, aujourd'hui, non seulement d'un trajet courtois, mais également service agréable à bord de nos véhicules.">      <link rel="canonical" href="https://www.votrechauffeur.ma/" />
+<meta property="og:image" content="https://votrechauffeur.ma/assets/images/vtcpng1.png" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta property="fb:admins" content="100000451279824">
+<meta property="fb:app_id" content="719791808119536">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="smartbanner:title" content="Votrechauffeur.ma">
+    <meta name="smartbanner:author" content="&nbsp;">
+    <meta name="smartbanner:price" content="- ">
+    <meta name="smartbanner:price-suffix-apple" content="App Store">
+    <meta name="smartbanner:price-suffix-google" content="Play Store">
+<!--    <meta name="smartbanner:icon-apple" content="https://is4-ssl.mzstatic.com/image/thumb/Purple123/v4/17/96/c5/1796c5bb-fd24-d656-81e9-1819879a6053/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-6.png/230x0w.jpg">-->
+<!--    <meta name="smartbanner:icon-google" content="http://lh3.ggpht.com/f4oX61ljZ6x8aYDELZOgxlvdUEu73-wSQ4fy5bx6fCRISnZP8T353wdaM43RO_DbGg=w300">-->
+    <meta name="smartbanner:icon-apple" content="https://votrechauffeur.ma/assets/images/chaffeur_icon.png">
+    <meta name="smartbanner:icon-google" content="https://votrechauffeur.ma/assets/images/chaffeur_icon.png">
+    <meta name="smartbanner:button" content="Installer">
+    <meta name="smartbanner:button-url-apple" content="https://itunes.apple.com/fr/app/id937914870?mt=8">
+    <meta name="smartbanner:button-url-google" content="https://play.google.com/store/apps/details?id=com.chauffeur.ma&hl=fr_FR">
+    <meta name="smartbanner:enabled-platforms" content="android,ios">
+    <meta name="smartbanner:close-label" content="Close this banner">
+
+    <meta name="google-site-verification" content="V1Y6FC7nCVaQltr1nTq7K2dxHCwpiwGXkOWjeMG0rOo" />
+<!-- Mailchimp -->
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/156050a8a08a301c5aa358629/a09cf23438b492c68b4b4c4cb.js");</script>
+<!-- End Mailchimp -->
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '381279665925426');
+  fbq('track', 'PageView');
+   </script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=381279665925426&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+<!--  --> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+        <!-- Include SmartWizard CSS -->
+    <link href="https://votrechauffeur.ma/assets/css/smart_wizard.css" rel="stylesheet" type="text/css" />
+
+    <!-- Optional SmartWizard theme -->
+    <link href="https://votrechauffeur.ma/assets/css/smart_wizard_theme_circles.css" rel="stylesheet" type="text/css" />
+    <link href="https://votrechauffeur.ma/assets/css/smart_wizard_theme_arrows.css" rel="stylesheet" type="text/css" />
+    <link href="https://votrechauffeur.ma/assets/css/smart_wizard_theme_dots.css" rel="stylesheet" type="text/css" />
+
+        <link rel="stylesheet" href="https://votrechauffeur.ma/assets/css/theme-orange.css" />
+        <link rel="stylesheet" href="https://votrechauffeur.ma/assets/css/styleora.css" />
+        <link rel="stylesheet" href="https://votrechauffeur.ma/assets/css/animate.css" />
+
+        <link rel="stylesheet" href="https://votrechauffeur.ma/assets/css/responsive2.css" />
+                <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
+
+
+        <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+
+
+
+
+
+
+                   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.js"></script>
+
+
+         <!--[toast]-->
+        <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+        <link href="https://votrechauffeur.ma/assets/css/tokenize2.css" rel="stylesheet" />
+
+    <script src="https://votrechauffeur.ma/assets/js/tokenize2.js"></script>
+
+        <link rel="stylesheet" href="https://votrechauffeur.ma/assets/js/clock/flipclock.css" />
+
+
+
+                <script src="https://votrechauffeur.ma/assets/js/clock/flipclock.js"></script>
+
+                <script src="https://votrechauffeur.ma/assets/main/sweetalert.min.js"></script>
+        <!-- a changer -->
+
+
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+
+
+
+
+    <script>
+            </script>
+        <!-- Google Analytics -->
+    <!--<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-XXXXX-Y', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>-->
+<!-- End Google Analytics -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TLH45WR');</script>
+<!-- End Google Tag Manager -->
+<!--    <link href="//cdnjs.cloudflare.com/ajax/libs/jquery-smart-web-app-banner/1.5/jquery.smartwebbanner.min.css" rel="stylesheet" type="text/css" />-->
+    <link rel="stylesheet" href="https://votrechauffeur.ma/assets/banner/smartbanner.css">
+    <script src="https://votrechauffeur.ma/assets/banner/smartbanner.js?3"></script>
+  </head>
+
+  <body class="home">
+  <script>
+</script>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLH45WR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- /Whatsapp Messengenr -->
+
+
+<!-- /Whatsapp Messengenr widget -->
+
+
+<script type="text/javascript">
+//     if( /iPad|iPhone/i.test(navigator.userAgent) ) {
+//
+//         //cookie name mypopup not found so display the popup
+//        if(!getCookie("mypopup")){
+//             setCookie("mypopup",true); //sets the cookie mypopup
+//             var url=confirm("Voulez-vous télécharger notre application mobile?");
+//             if (url==true)
+//             {
+//                 var url = window.location.href = 'https://itunes.apple.com/fr/app/id937914870?mt=8';
+//                 url.show();
+//             }else{
+//
+//
+//             }
+//        }
+//
+//     }
+//      var deviceIsMobile = false; //At the beginning we set this flag as false. If we can detect the device is a mobile device in the next line, then we set it as true.
+//
+//
+// if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
+//     || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) {
+//    //cookie name mypopup not found so display the popup
+//        if(!getCookie("mypopup")){
+//             setCookie("mypopup",true); //sets the cookie mypopup
+//             var url=confirm("Voulez-vous télécharger notre application mobile?");
+//             if (url==true)
+//             {
+//                 var url = window.location.href = 'https://play.google.com/store/apps/details?id=com.chauffeur.ma&hl=fr_FR';
+//                 url.show();
+//             }else{
+//
+//
+//             }
+//        }
+// }
+
+//function to retrieve cookie value
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length,c.length);
+        }
+    }
+    return "";
+}
+
+//function to set the cookie
+function setCookie(cname, cvalue) {
+    document.cookie = cname + "=" + cvalue + "; ";
+}
+    </script>
+                <!-- Header -->
+                <div class="header-area-1" style="background-image: url(https://votrechauffeur.ma/assets/images/bg_7.jpg); ;border-bottom: 1px solid #191f26;">
+
+                        <!-- BEGIN .top-bar-wrapper -->
+                        <div class="top-bar-wrapper">
+
+                                <!-- BEGIN .top-bar -->
+                                <div class="top-bar clearfix">
+
+                                        <!-- BEGIN .top-bar-left -->
+                                        <div class="top-bar-left">
+
+                                                <p><i class="fa fa-phone"></i> Depuis le Maroc : <a href='tel:+212522984000' style='color:white'></a> | Depuis l'Étranger : <a href='tel:+33184253382' style='color:white'>+33 1 84 25 33 82</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a target='_blank'  href='https://wa.me/212699997483' style='color:black;font-weight: normal;'><img src="https://votrechauffeur.ma/assets/imgs/whatsapp.png" height="30"/></a>&nbsp;&nbsp;&nbsp;
+                            <a target='_blank'  href='https://m.me/votrechauffeur.ma' style='color:black;font-weight: normal;'><img src="https://votrechauffeur.ma/assets/imgs/messenger.png" height="35"/></a>
+
+                        </p>
+
+                                        <!-- END .top-bar-left -->
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                                  <div class="top-bar-right" style=" margin: -1px 0px -3px 0px; padding: 5px 0px 0px 0px;">
+                                                        <div class="city_middle" style="position:relative">
+                                                                                <ul>
+                                                                <li id="b1"  class="hidden-xs" ><a class="btn small color right wow fadeInRight animated" href="https://votrechauffeur.ma/login" title="Se connecter"><i class="fa fa-unlock-alt"></i> Se connecter</a> </li>
+
+                                                                <li id="b2"  class="hidden-xs" ><a class="btn small color right wow fadeInRight animated" href="https://votrechauffeur.ma/compte" title="S'inscrire"><i class="fa fa-user"></i> S'inscrire</a> </li>
+
+                                                                <li id="b4"  class="hidden-xs" > <a  class="btn small back right wow fadeInRight animated" href="https://votrechauffeur.ma/entreprise" title="Inscription entreprises"><i class="fa fa-users"></i> Inscription entreprises</a> </li>
+
+                                                                <li id="b5"> <a  class="btn small back right wow fadeInRight animated" href="https://votrechauffeur.ma/fr" title="Francais"> <img src="https://votrechauffeur.ma/assets/images/icon-france.png" ></a> </li>
+                                                                <li id="b5"> <a  class="btn small back right wow fadeInRight animated" href="https://votrechauffeur.ma/en" title="English"><img src="https://votrechauffeur.ma/assets/images/icon-en.png" ></a> </li>
+                                                          </ul>
+                                                                                <div class="clear"></div>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                  </div>
+                                                  <div class="clear"></div>
+
+
+
+
+                                                                                                <script>
+                        $(function(){
+                        $("#locas").click(function(){
+                         if ($('#infopro').is(':hidden'))
+                                $("#infopro").show('slow');
+                        else
+                                $("#infopro").hide('slow');
+                        })});
+                        </script>
+
+                                <style>
+                                        ul#infopro {
+    position: absolute;
+    right: 0px;
+    top: 45px;
+    background-color: #FFFFFF;
+    z-index: 9999;
+    width: 210px;
+    overflow: hidden;
+    margin-top: 5px;
+    border-bottom: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    padding: 5px 10px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 5px;
+}
+#infopro li {
+    border-bottom: 1px solid #D8D8D8;
+        float: left;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+}
+#infopro li:hover {
+background-color: #111;
+}
+#infopro li:hover a {
+color: #E6E1E1;
+}
+#infopro li a {
+color: #111;
+padding: 0px;
+margin: 0px;
+height: auto!important;
+text-align: left;
+}
+                                </style>
+
+
+                                <!-- END .top-bar -->
+                                </div>
+
+                        <!-- END .top-bar-wrapper -->
+                        </div>
+
+                        <!-- BEGIN .header-content -->
+                        <div class="header-content">
+
+                                <!-- BEGIN .logo -->
+                                <div class="logo">
+                                <a href="https://votrechauffeur.ma/" title="Retour vers l'accueil de VotreChauffeur.ma">
+                                <h1></h1>
+
+                                        </a>
+                                <!-- END .logo -->
+                                </div>
+
+                                <!-- BEGIN .header-icons-wrapper -->
+                                <div class="header-icons-wrapper clearfix">
+
+                                <div class="appstore">
+                                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.chauffeur.ma&hl=fr_FR" class="topright-button"><img src="https://votrechauffeur.ma/assets/images/GooglePlay2-FR.png" style="width: 155px;"></a>
+                                        <a target="_blank" href="https://itunes.apple.com/fr/app/id937914870?mt=8" class="topright-button"></a>
+                                </div>
+
+
+                                <!-- END .header-icons-wrapper -->
+                                </div>
+
+                                <div id="mobile-navigation">
+
+                                        <a href="#" id="mobile-navigation-btn"><i class="fa fa-bars" style="font-size: 30px;"></i></a>
+                                </div>
+
+                                <div class="clearboth"></div>
+
+                                <!-- BEGIN .mobile-navigation-wrapper -->
+                                <div class="mobile-navigation-wrapper"     style="position: absolute;">
+
+                                        <ul  align="center">
+
+                                                        <li>
+
+
+
+
+                                                                <div  align="center">
+
+                                                                <a class="btn small color  wow fadeInRight animated" href="https://votrechauffeur.ma/login" title="Se connecter"><i class="fa fa-unlock-alt"></i> Se connecter</a>
+
+                                                                <a class="btn small color  wow fadeInRight animated" href="https://votrechauffeur.ma/compte" title="S'inscrire"><i class="fa fa-user"></i> S'inscrire</a>
+
+                                                                <a  class="btn small back  wow fadeInRight animated" href="https://votrechauffeur.ma/entreprise" title="Inscription entreprises"><i class="fa fa-users"></i> Inscription entreprises</a>
+
+                                                                                </div>
+
+
+
+
+
+
+
+                                                        </li>
+                                                                                                                <li>
+                                                                <a href="https://votrechauffeur.ma/">Accueil</a>
+
+                                                        </li>
+                                                        <li>
+                                                                <a href="https://votrechauffeur.ma/vtc/reservation/course-simple">Course simple</a>
+
+                                                        </li>
+                                                        <li>
+                                                                <a href="https://votrechauffeur.ma/vtc/reservation/intra-ville">Mise à Disposition</a>
+
+                                                        </li>
+                                                        <li>
+                                                                <a href="https://votrechauffeur.ma/services">Comment ça marche ?</a>
+
+                                                        </li>
+                                                        <li>
+                                                                <a href="https://votrechauffeur.ma/faq">Vos questions/Nos réponses</a>
+
+                                                        </li>
+                                                        <li>
+                                                                <a href="https://votrechauffeur.ma/blog">Blog</a>
+
+                                                        </li>
+                                                </ul>
+
+                                <!-- END .mobile-navigation-wrapper -->
+                                </div>
+
+                        <!-- END .header-content -->
+                        </div>
+
+                        <!-- BEGIN #primary-navigation -->
+                        <nav id="primary-navigation" class="navigation-wrapper fixed-navigation clearfix">
+
+                                <!-- BEGIN .navigation-inner -->
+                                <div class="navigation-inner" style="margin-top: 20px;">
+
+                                        <!-- BEGIN .navigation -->
+                                        <div class="navigation">
+
+                                                <ul>
+                                                        <li>
+                                                                <a href="https://votrechauffeur.ma/">Accueil</a>
+
+                                                        </li>
+                                                        <li>
+                                                                <a href="https://votrechauffeur.ma/vtc/reservation/course-simple">Course simple</a>
+
+                                                        </li>
+                                                        <li>
+                                                                <a href="https://votrechauffeur.ma/vtc/reservation/intra-ville">Mise à Disposition</a>
+
+                                                        </li>
+                                                        <li>
+                                                                <a href="https://votrechauffeur.ma/services">Comment ça marche ?</a>
+
+                                                        </li>
+                                                        <li>
+                                                                <a href="https://votrechauffeur.ma/faq">Vos questions/Nos réponses</a>
+
+                                                        </li>
+                                                        <li>
+                                                                <a href="https://votrechauffeur.ma/blog">Blog</a>
+
+                                                        </li>
+                                                </ul>
+
+                                        <!-- END .navigation -->
+                                        </div>
+
+
+                                <!-- END .navigation-inner -->
+                                </div>
+
+                        <!-- END #primary-navigation -->
+                        </nav>
+
+                <!-- END .header-area-1 -->
                 </div>
-            </div>
-        </nav>
-
-        <!-- Header-->
-         <!-- Debut carrousel -->
-        <!-- <header class="bg-dark py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Fatou Shop</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
-                </div>
-            </div>
-        </header> -->
-
-        <!-- Debut Carousel -->
-            <div id="demo" class="carousel slide " data-bs-ride="carousel" style="border: 4px solid #fff;">
-                    <!-- Indicators/dots -->
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-                    </div>
-                    <!-- The slideshow/carousel -->
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" >
-                        <img src="img/caroussel1.png" alt="Los Angeles" class="d-block w-100">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="img/caroussel1.png" alt="Chicago" class="d-block w-100">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="img/caroussel1.png" alt="New York" class="d-block w-100" >
-                        </div>
-                    </div>
-                    <!-- Left and right controls/icons -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
-            </div>
-        <!-- Fin Caroussel -->
+                <!-- //Header -->
 
 
-        <!-- Début Section 1 qui contient les premier 8 images -->
-        <!-- Section-->
-        <section>
-            <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <!-- debut img numéro 1 -->
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/1200x/ad/fb/82/adfb829abdcb073700289d84b7dfcc57.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <a href="https://wa.me/212600644006?text=Bonjour%20je%20voulais%20plus%20d'information%20sur%20ce%20produit%20Fancy%20Product%20:https://i.pinimg.com/1200x/ad/fb/82/adfb829abdcb073700289d84b7dfcc57.jpg" target="_blank" class="btn btn-success d-flex justify-content-center">
-                                    <i class="bi bi-whatsapp mx-2"></i> WhatsApp
-                                    <!-- Je veux quand on clique sur ce lien , il doit etre acco;pagné du text de ce produit actuel en commençant avec Bonjour je voulais plus d'information sur ce produit en mettant e avant l'image du produit actuel  -->
-                                </a>
-                                <!-- <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin img numéro 1 -->
-                    <!-- debut img numéro 2 -->
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/736x/dc/84/eb/dc84eb9834424639253445266285c283.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <a href="https://wa.me/212600644006?text=Bonjour%20je%20voulais%20plus%20d'information%20sur%20ce%20produit%20Fancy%20Product%20:https://i.pinimg.com/736x/dc/84/eb/dc84eb9834424639253445266285c283.jpg" target="_blank" class="btn btn-success d-flex justify-content-center">
-                                    <i class="bi bi-whatsapp mx-2"></i> WhatsApp
-                                    <!-- Je veux quand on clique sur ce lien , il doit etre acco;pagné du text de ce produit actuel en commençant avec Bonjour je voulais plus d'information sur ce produit en mettant e avant l'image du produit actuel  -->
-                                </a>
-                                <!-- <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin img numéro 2 -->
-                    <!-- debut img numéro 3 -->
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/736x/93/3a/4b/933a4bc33c3d73a57262fbb120e2a6c0.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <a href="https://wa.me/212600644006?text=Bonjour%20je%20voulais%20plus%20d'information%20sur%20ce%20produit%20Fancy%20Product%20:%20https://i.pinimg.com/736x/93/3a/4b/933a4bc33c3d73a57262fbb120e2a6c0.jpg" target="_blank" class="btn btn-success d-flex justify-content-center">
-                                    <i class="bi bi-whatsapp mx-2"></i> WhatsApp
-                                    <!-- Je veux quand on clique sur ce lien , il doit etre acco;pagné du text de ce produit actuel en commençant avec Bonjour je voulais plus d'information sur ce produit en mettant e avant l'image du produit actuel  -->
-                                </a>
-                                <!-- <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin img numéro 3 -->
-                    <!-- debut img numéro 4 -->
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/736x/25/b1/26/25b12677be57ca27644521a8e0caccf3.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <a href="https://wa.me/212600644006?text=Bonjour%20je%20voulais%20plus%20d'information%20sur%20ce%20produit%20Fancy%20Product%20:%20https://i.pinimg.com/736x/25/b1/26/25b12677be57ca27644521a8e0caccf3.jpg" target="_blank" class="btn btn-success d-flex justify-content-center">
-                                    <i class="bi bi-whatsapp mx-2"></i> WhatsApp
-                                    <!-- Je veux quand on clique sur ce lien , il doit etre acco;pagné du text de ce produit actuel en commençant avec Bonjour je voulais plus d'information sur ce produit en mettant e avant l'image du produit actuel  -->
-                                </a>
-                                <!-- <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin img numéro 4 -->
-                    <!-- debut img numéro 5 -->
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/1200x/ef/8c/b3/ef8cb3d7485608a0c47f91f59a5eaf99.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <a href="https://wa.me/212600644006?text=Bonjour%20je%20voulais%20plus%20d'information%20sur%20ce%20produit%20Fancy%20Product%20:%20https://i.pinimg.com/1200x/ef/8c/b3/ef8cb3d7485608a0c47f91f59a5eaf99.jpg" target="_blank" class="btn btn-success d-flex justify-content-center">
-                                    <i class="bi bi-whatsapp mx-2"></i> WhatsApp
-                                    <!-- Je veux quand on clique sur ce lien , il doit etre acco;pagné du text de ce produit actuel en commençant avec Bonjour je voulais plus d'information sur ce produit en mettant e avant l'image du produit actuel  -->
-                                </a>
-                                <!-- <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin img numéro 5 -->
-                    <!-- debut img numéro 6 -->
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/736x/e3/ca/77/e3ca77dce4b8dd4f496f94403b846bbc.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <a href="https://wa.me/212600644006?text=Bonjour%20je%20voulais%20plus%20d'information%20sur%20ce%20produit%20Fancy%20Product%20:%20https://i.pinimg.com/736x/e3/ca/77/e3ca77dce4b8dd4f496f94403b846bbc.jpg" target="_blank" class="btn btn-success d-flex justify-content-center">
-                                    <i class="bi bi-whatsapp mx-2"></i> WhatsApp
-                                    <!-- Je veux quand on clique sur ce lien , il doit etre acco;pagné du text de ce produit actuel en commençant avec Bonjour je voulais plus d'information sur ce produit en mettant e avant l'image du produit actuel  -->
-                                </a>
-                                <!-- <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin img numéro 6 -->
-                    <!-- debut img numéro 7 -->
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/1200x/c9/e3/f5/c9e3f5c186dda7600f8d299afa1dc01c.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <a href="https://wa.me/212600644006?text=Bonjour%20je%20voulais%20plus%20d'information%20sur%20ce%20produit%20Fancy%20Product%20:%20https://i.pinimg.com/736x/e3/ca/77/e3ca77dce4b8dd4f496f94403b846bbc.jpg" target="_blank" class="btn btn-success d-flex justify-content-center">
-                                    <i class="bi bi-whatsapp mx-2"></i> WhatsApp
-                                    <!-- Je veux quand on clique sur ce lien , il doit etre acco;pagné du text de ce produit actuel en commençant avec Bonjour je voulais plus d'information sur ce produit en mettant e avant l'image du produit actuel  -->
-                                </a>
-                                <!-- <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin img numéro 7 -->
-                    <!-- debut img numéro 8 -->
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/736x/ea/9b/21/ea9b218019b5363563d5ac142f4b0d7e.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <a href="https://wa.me/212600644006?text=Bonjour%20je%20voulais%20plus%20d'information%20sur%20ce%20produit%20Fancy%20Product%20:%20https://i.pinimg.com/736x/ea/9b/21/ea9b218019b5363563d5ac142f4b0d7e.jpg" target="_blank" class="btn btn-success d-flex justify-content-center">
-                                    <i class="bi bi-whatsapp mx-2"></i> WhatsApp
-                                    <!-- Je veux quand on clique sur ce lien , il doit etre acco;pagné du text de ce produit actuel en commençant avec Bonjour je voulais plus d'information sur ce produit en mettant e avant l'image du produit actuel  -->
-                                </a>
-                                <!-- <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin img numéro 8 -->
-                </div>
-            </div>
-        </section>
-        <!-- Fin section 1 qui contient les premier 8 images -->
 
 
-        <!-- Début Section 2 qui contient les Deuxième 8 images -->
-        <!-- Section-->
-        <section style="margin: 0px;">
-            <div class="container px-4 px-lg-5 ">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <!-- debut img numéro 9 -->
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/736x/57/d3/00/57d300d8dc0f5eae0a7d13df6d3238a1.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <a href="https://wa.me/212600644006?text=Bonjour%20je%20voulais%20plus%20d'information%20sur%20ce%20produit%20Fancy%20Product%20:%20https://i.pinimg.com/736x/57/d3/00/57d300d8dc0f5eae0a7d13df6d3238a1.jpg" target="_blank" class="btn btn-success d-flex justify-content-center">
-                                    <i class="bi bi-whatsapp mx-2"></i> WhatsApp
-                                    <!-- Je veux quand on clique sur ce lien , il doit etre acco;pagné du text de ce produit actuel en commençant avec Bonjour je voulais plus d'information sur ce produit en mettant e avant l'image du produit actuel  -->
-                                </a>
-                                <!-- <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin img numéro 9 -->
-                    <!-- debut img numéro 10 -->
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/1200x/b9/ec/c2/b9ecc25771a5f96c20b4b699e590a68b.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <a href="https://wa.me/212600644006?text=Bonjour%20je%20voulais%20plus%20d'information%20sur%20ce%20produit%20Fancy%20Product%20:%20https://i.pinimg.com/736x/57/d3/00/57d300d8dc0f5eae0a7d13df6d3238a1.jpg" target="_blank" class="btn btn-success d-flex justify-content-center">
-                                    <i class="bi bi-whatsapp mx-2"></i> WhatsApp
-                                    <!-- Je veux quand on clique sur ce lien , il doit etre acco;pagné du text de ce produit actuel en commençant avec Bonjour je voulais plus d'information sur ce produit en mettant e avant l'image du produit actuel  -->
-                                </a>
-                                <!-- <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin img numéro 10 -->
-                    <!-- debut img numéro 11 -->
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/736x/75/ca/dd/75caddc9448b8c20840fc7f2401a6693.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <a href="https://wa.me/212600644006?text=Bonjour%20je%20voulais%20plus%20d'information%20sur%20ce%20produit%20Fancy%20Product%20:%20https://i.pinimg.com/736x/75/ca/dd/75caddc9448b8c20840fc7f2401a6693.jpg" target="_blank" class="btn btn-success d-flex justify-content-center">
-                                    <i class="bi bi-whatsapp mx-2"></i> WhatsApp
-                                    <!-- Je veux quand on clique sur ce lien , il doit etre acco;pagné du text de ce produit actuel en commençant avec Bonjour je voulais plus d'information sur ce produit en mettant e avant l'image du produit actuel  -->
-                                </a>
-                                <!-- <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin img numéro 11 -->
-                    <!-- debut img numéro 12 -->
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/736x/ff/f0/c5/fff0c5ef88a75a68bdca48a8aa4ba9b1.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <a href="https://wa.me/212600644006?text=Bonjour%20je%20voulais%20plus%20d'information%20sur%20ce%20produit%20Fancy%20Product%20:%20https://i.pinimg.com/736x/ff/f0/c5/fff0c5ef88a75a68bdca48a8aa4ba9b1.jpg" target="_blank" class="btn btn-success d-flex justify-content-center">
-                                    <i class="bi bi-whatsapp mx-2"></i> WhatsApp
-                                    <!-- Je veux quand on clique sur ce lien , il doit etre acco;pagné du text de ce produit actuel en commençant avec Bonjour je voulais plus d'information sur ce produit en mettant e avant l'image du produit actuel  -->
-                                </a>
-                                <!-- <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin img numéro 12 -->
-                    <!-- debut img numéro 13 -->
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/1200x/1b/6d/7c/1b6d7c4191e85be30c44fba3deed6855.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <a href="https://wa.me/212600644006?text=Bonjour%20je%20voulais%20plus%20d'information%20sur%20ce%20produit%20Fancy%20Product%20:%20https://i.pinimg.com/1200x/1b/6d/7c/1b6d7c4191e85be30c44fba3deed6855.jpg" target="_blank" class="btn btn-success d-flex justify-content-center">
-                                    <i class="bi bi-whatsapp mx-2"></i> WhatsApp
-                                    <!-- Je veux quand on clique sur ce lien , il doit etre acco;pagné du text de ce produit actuel en commençant avec Bonjour je voulais plus d'information sur ce produit en mettant e avant l'image du produit actuel  -->
-                                </a>
-                                <!-- <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin img numéro 13 -->
-                    <!-- debut img numéro 14 -->
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/1200x/c6/aa/05/c6aa053d15396c3682374bd95c02cec5.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <a href="https://wa.me/212600644006?text=Bonjour%20je%20voulais%20plus%20d'information%20sur%20ce%20produit%20Fancy%20Product%20:%20https://i.pinimg.com/1200x/c6/aa/05/c6aa053d15396c3682374bd95c02cec5.jpg" target="_blank" class="btn btn-success d-flex justify-content-center">
-                                    <i class="bi bi-whatsapp mx-2"></i> WhatsApp
-                                    <!-- Je veux quand on clique sur ce lien , il doit etre acco;pagné du text de ce produit actuel en commençant avec Bonjour je voulais plus d'information sur ce produit en mettant e avant l'image du produit actuel  -->
-                                </a>
-                                <!-- <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin img numéro 14 -->
-                    <!-- debut img numéro 15 -->
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/736x/fe/06/7d/fe067dbb2723b638f36b931878b8996b.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <a href="https://wa.me/212600644006?text=Bonjour%20je%20voulais%20plus%20d'information%20sur%20ce%20produit%20Fancy%20Product%20:" target="_blank" class="btn btn-success d-flex justify-content-center">
-                                    <i class="bi bi-whatsapp mx-2"></i> WhatsApp
-                                    <!-- Je veux quand on clique sur ce lien , il doit etre acco;pagné du text de ce produit actuel en commençant avec Bonjour je voulais plus d'information sur ce produit en mettant e avant l'image du produit actuel  -->
-                                </a>
-                                <!-- <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin img numéro 15 -->
-                    <!-- debut img numéro 16 -->
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/1200x/51/fc/2d/51fc2d40d802ec08d4e6c7248907b024.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <a href="https://wa.me/212600644006?text=Bonjour%20je%20voulais%20plus%20d'information%20sur%20ce%20produit%20Fancy%20Product%20:%20https://i.pinimg.com/1200x/51/fc/2d/51fc2d40d802ec08d4e6c7248907b024.jpg" target="_blank" class="btn btn-success d-flex justify-content-center">
-                                    <i class="bi bi-whatsapp mx-2"></i> WhatsApp
-                                    <!-- Je veux quand on clique sur ce lien , il doit etre acco;pagné du text de ce produit actuel en commençant avec Bonjour je voulais plus d'information sur ce produit en mettant e avant l'image du produit actuel  -->
-                                </a>
-                                <!-- <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin img numéro 16 -->
-                </div>
-            </div>
-        </section>
-        <!-- Fin section 1 qui contient les premier 8 images -->
-         <!-- Sinscrire a notre newsletter -->
-        <!-- <section class="py-5">
-            <div class="container">
-                <h2 class="fw-bolder mb-4">S'inscrire à notre newsletter</h2>
-                <form>
-                    <div class="input-group">
-                        <input class="form-control" type="email" placeholder="Entrez votre adresse e-mail" aria-label="Entrez votre adresse e-mail" />
-                        <button class="btn btn-primary" type="submit">S'inscrire</button>
-                    </div>
-                </form>
-            </div>
-        </section> -->
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container">
-                <p class="m-0 text-center text-white">Copyright &copy; Fatou Couture 2025</p>
-            </div>
-            <!-- icone facebook et insta -->
-            <div class="container">
+
+
+
+
+
+  <!--Use the below code snippet to provide real time updates to the live chat plugin without the need of copying and paste each time to your website when changes are made via PBX-->
+  <call-us-selector phonesystem-url="https://wibzen.3cx.ma:5010" party="LiveChat201845"></call-us-selector>
+
+  <!--Incase you don't want real time updates to the live chat plugin when options are changed, use the below code snippet. Please note that each time you change the settings you will need to copy and paste the snippet code to your website-->
+  <!--<call-us
+  phonesystem-url="https://wibzen.3cx.ma:5010"
+  style="position:fixed;font-size:16px;line-height:17px;z-index: 99999;--call-us-main-accent-color:#D63004;--call-us-main-background-color:#FFFFFF;--call-us-plate-background-color:#D97E18;--call-us-plate-font-color:#E6E6E6;--call-us-main-font-color:#292929;--call-us-agent-bubble-color:#29292910;right: 20px; bottom: 20px;"
+  id="wp-live-chat-by-3CX"
+  minimized="false"
+  animation-style="slidefromside"
+  party="LiveChat201845"
+  minimized-style="bubbleright"
+  allow-call="true"
+  allow-video="false"
+  allow-soundnotifications="true"
+  enable-mute="true"
+  enable-onmobile="true"
+  offline-enabled="true"
+  enable="true"
+  ignore-queueownership="false"
+  authentication="both"
+  operator-name="Support Client"
+  show-operator-actual-name="true"
+  aknowledge-received="true"
+  operator-icon="data:image/png;base64,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"
+  gdpr-enabled="false"
+  message-userinfo-format="both"
+  message-dateformat="both"
+  lang="browser"
+  button-icon-type="doublebubble"
+  greeting-visibility="none"
+  greeting-offline-visibility="none"
+  chat-delay="2000"
+  enable-direct-call="true"
+  enable-ga="false"
+  ></call-us>-->
+  <script defer src="https://downloads-global.3cx.com/downloads/livechatandtalk/v1/callus.js" id="tcx-callus-js" charset="utf-8"></script>
+<style>
+label.btn.btn-success.active {
+    background-color: #fdc903 !important;
+    border-color: #fdc903 !important;
+        color:#191f26 !important;
+}
+
+label.btn.btn-secondary {
+    background-color: #191f26;
+}
+label.btn.btn-secondary:hover {
+    background-color: #191f26 !important;
+}
+
+.btn-group.btn-group-toggle {
+    float: right;
+}
+
+.pra {
+    text-align: left;
+    margin-top: 20px;
+        padding-top: 20px;
+    border-top: 1px solid #DFDFD0;
+          overflow: hidden;
+}
+
+</style>
+
+<main class="main" role="main">
+
+
+        <div class="row locado" style="    CLEAR: BOTH;"  ng-controller="AppC" >
+                                <div class="col-md-0 wid1 oranomargeright" id="wid1" >
+                                                                </div>
+                                <div class="col-md-12 content0 oranomarge"  id="content0">
+
+                                <!-- Main -->
+<main class="main" role="main" >
+    <!-- Intro -->
+
+    <div class="intro" style="height: 800px; background: no-repeat url(https://votrechauffeur.ma/assets/images/video_6.jpg) 100% 9% black;
+            background-size: 100%;">
+
+        <!--        <video autoplay="" muted="" poster="--><!--assets/images/video_6.jpg" loop="" id="myVideo" style="width: 130%;" class="fill">-->
+        <!--            <source id="primary-navigation" src="--><!--assets/images/pay-on-the-go.mp4" type="video/mp4">-->
+        <!--                      <source src="--><!--assets/images/pay-on-the-go.webm" type="video/webm">-->
+        <!--        </video>-->
+
+
+
+        <div class="wrap">
+            <div class="textwidget" style="padding-bottom: 0">
                 <div class="row">
-                    <div class="col text-center">
-                        <a href="https://www.facebook.com" target="_blank" class="text-white mx-2">
-                            <i class="bi bi-facebook"></i>
+                    <div class="col-md-4 hidden-xs hidden-sm">
+                        <img src="img/LogoDBSv2.png" style="width: 90%;">
+                    </div>
+
+                    <div class="col-lg-8 col-sm-12">
+                        <h1 class="wow fadeInDown">VOTRECHAUFFEUR.MA</h1>
+                        <h2 class="wow fadeInUp">VÉHICULES AVEC CHAUFFEUR</h2>
+                        <div><img class="img-fluid " src="img/LogoDBSv2.png" style="width: 90%;"></div>
+
+                        <!--                        <h3 class="wow fadeInUp animated" style="visibility: visible; -webkit-animation: fadeInUp;padding: 10px 0px;"><span class="flashit" style="padding-right:10px;color: #fdc903;font-size:  18px;"><i class="fa fa-car" style="text-rendering: optimizeLegibility;"></i></span><a href="#" id="myBtn" class="flashit" style="color:#fff;">--><!-- </a><span class="flashit" style="padding-left:10px;color: #fdc903;font-size:  18px;"><i class="fa fa-car"></i></span></h3>-->
+                        <!--                                    <div><img src="--><!--assets/images/vito_0.png" style="    width: 150px;"></div>-->
+                        <div class="actions">
+                            <h2 style="margin-bottom: 25px;">SOUHAITEZ VOUS QUE VOTRE CHAUFFEUR :
+</h2>
+                            <a href="https://votrechauffeur.ma/vtc/reservation/course-simple" title="Course simple" class="btn large2 white wow fadeInLeft anchor">Vous emmène <br>du point A au point B <br><span style="font-size: small;text-transform: initial;">(Facturation au Km)</span></a>
+
+                            <a href="https://votrechauffeur.ma/vtc/reservation/intra-ville" title="Mise à Disposition" class="btn large2 color wow fadeInRight anchor">Reste avec vous pendant <br>toute la durée souhaitée <br><span style="font-size: small;text-transform: initial;">(Facturation à l'heure) </span></a>
+                        </div>
+                    <!--    <a href="https://votrechauffeur.ma/vtc/rubrique_entreprises">
+                            <img class="mx-auto d-block" alt="rubrique_entreprises" src="https://votrechauffeur.ma/assets/images/B1.png" style="height: 110px;">
                         </a>
-                        <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">
-                            <i class="bi bi-instagram"></i>
-                        </a>
+                        -->
+
                     </div>
                 </div>
+
+
+
+
             </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+        </div>
+    </div>
+    <!--    <script src="https://widget.trustmary.com/vgYGX2r5d"></script>-->
+<!--    <iframe src="https://www.google.com/maps/embed/v1/place?q=place_id:0xda7d2eb4cf26337:0x74b37fc908aea6c4" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>-->
+<!---->
+<!--    <script async defer type="application/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZsoPS5rnF8a9OJXvaxtTIGW9pSKRBU7A&region=MA&language=FR&v=3.exp&libraries=places&callback=initMap"></script>-->
+<!--    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZsoPS5rnF8a9OJXvaxtTIGW9pSKRBU7A&region=MA&language=FR&v=3.exp&libraries=places"></script>-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/place-ratings@latest/dist/place-ratings.min.js"></script>-->
+<!---->
+<!--    <div id="google-reviews"></div>-->
+<!--    <script>-->
+<!--        function initMap() {-->
+<!--            placeRatings.load({-->
+<!--                target: '#google-reviews',-->
+<!--                placeId: 'ChIJN2PyTOvSpw0RxKauCMl_s3Q' // Replace with your actual Place ID-->
+<!--            });-->
+<!--        }-->
+<!--    </script>-->
+    <div class="services iconic white">
+        <div class="wrap text-center text-justify">
+            <div class="row">
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <div class="elfsight-app-85bbc1fd-f600-41ae-a499-f644d37bac8e" data-elfsight-app-lazy></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Check if the Elfsight widget is loaded
+            setTimeout(function() {
+                var button = document.querySelector('.elfsight-app-85bbc1fd-f600-41ae-a499-f644d37bac8e a[href*="elfsight.com/google-reviews-widget"]');
+                if (button) {
+                    button.style.display = 'none'; // Hides the button
+                }
+            }, 3000); // Adjust the timeout as necessary
+        });
+    </script>
+            </div></div></div>
+    <!--   <div class="services iconic white">
+           <div class="wrap text-center text-justify">
+               <div class="row">
+               <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+               <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+               <style>
+                   body {
+                       font-family: Arial, sans-serif;
+                   }
+                   .review-carousel {
+                       width: 80%;
+                       margin: 0 auto;
+                   }
+                   .review {
+                       padding: 20px;
+                       border: 1px solid #ccc;
+                       border-radius: 5px;
+                       background-color: #f9f9f9;
+                       margin: 10px;
+                   }
+
+                   .review h4 {
+                       font-size: 16px;
+                   }
+
+                   .review .rating {
+                       color: #FFD700; /* Gold star color */
+                       margin-bottom: 10px;
+                   }
+
+
+
+                   .review h4,
+                   .review p {
+                       margin-bottom: 0;
+                   }
+                   /* Custom Slick arrows */
+                   .slick-prev,
+                   .slick-next {
+                       font-size: 0;
+                       line-height: 0;
+                       position: absolute;
+                       top: 50%;
+                       display: block;
+                       width: 20px;
+                       height: 20px;
+                       padding: 0;
+                       -webkit-transform: translate(0, -50%);
+                       -ms-transform: translate(0, -50%);
+                       transform: translate(0, -50%);
+                       cursor: pointer;
+                       color: transparent;
+                       border: none;
+                       outline: none;
+                       background: transparent;
+                       z-index: 1;
+                   }
+
+                   .slick-prev:before,
+                   .slick-next:before {
+                       font-family: "slick";
+                       font-size: 20px;
+                       line-height: 1;
+                       opacity: 0.75;
+                       color: black;
+                       -webkit-font-smoothing: antialiased;
+                       -moz-osx-font-smoothing: grayscale;
+                   }
+
+                   .slick-prev {
+                       left: -25px;
+                   }
+
+                   [dir="rtl"] .slick-prev {
+                       right: -25px;
+                       left: auto;
+                   }
+
+                   .slick-prev:before {
+                       content: "←";
+                   }
+
+                   .slick-next {
+                       right: -25px;
+                   }
+
+                   [dir="rtl"] .slick-next {
+                       right: auto;
+                       left: -25px;
+                   }
+
+                   .slick-next:before {
+                       content: "→";
+                   }
+               </style>
+
+
+               <div class="review-carousel" id="reviews"></div>
+               <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+               <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+               <script async defer type="application/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZsoPS5rnF8a9OJXvaxtTIGW9pSKRBU7A&region=MA&language=FR&v=3.exp&libraries=places&callback=initMap"></script>
+
+
+               <script>
+
+                   function fetchGoogleReviews() {
+                       const placeId = 'ChIJN2PyTOvSpw0RxKauCMl_s3Q'; // Replace with your Google Place ID
+                       const service = new google.maps.places.PlacesService(document.createElement('div'));
+
+                       service.getDetails({
+                           placeId: placeId,
+                           fields: ['reviews']
+                       }, (place, status) => {
+                           if (status === google.maps.places.PlacesServiceStatus.OK) {
+                               const reviewsContainer = document.getElementById('reviews');
+                               const filteredReviews = place.reviews.filter(review => review.rating >= 3); // Filter out reviews with rating < 4
+                               if (filteredReviews.length > 0) { // Check if there are any filtered reviews
+                                   filteredReviews.forEach((review) => {
+                                       const reviewElement = document.createElement('div');
+                                       reviewElement.className = 'review';
+                                       const reviewDate = new Date(review.time * 1000).toLocaleDateString();
+                                       const limitedText = review.text.length > 120 ? review.text.substring(0, 120) + '...' : review.text;
+                                       reviewElement.innerHTML = `
+                           <div class="col-md-4">
+                               <img src="${review.profile_photo_url || ''}" alt="${review.author_name}'s photo" class="img-fluid rounded mx-auto d-block">
+                           </div>
+                           <div class="col-md-8 align-bottom">
+                               <h4>${review.author_name}</h4>
+                           </div>
+                           <div class="col-md-12">
+                               <div class="rating">${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}</div>
+                               <p><em>${reviewDate}</em></p>
+                               <p>${limitedText}</p>
+                           </div>
+                       `;
+                                       reviewsContainer.appendChild(reviewElement);
+                                   });
+
+                                   // Initialize Slick Carousel
+                                   $('.review-carousel').slick({
+                                       infinite: true,
+                                       slidesToShow: 3,
+                                       slidesToScroll: 1,
+                                       autoplay: true,
+                                       autoplaySpeed: 2000,
+                                       dots: true,
+                                       arrows: true,
+                                       prevArrow: $('.slick-prev'),
+                                       nextArrow: $('.slick-next'),
+                                       responsive: [
+                                           {
+                                               breakpoint: 768, // Breakpoint for tablets and below
+                                               settings: {
+                                                   slidesToShow: 1 // Show 1 slide on tablets and below
+                                               }
+                                           }
+                                       ]
+                                   });
+                               } else {
+                                   console.log('No reviews with rating 4 or higher available for this place.');
+                               }
+                           } else {
+                               console.error('Error fetching reviews:', status);
+                           }
+                       });
+                   }
+                   // function fetchGoogleReviews() {
+                   //     const placeId = 'ChIJN2PyTOvSpw0RxKauCMl_s3Q'; // Replace with your Google Place ID
+                   //     const service = new google.maps.places.PlacesService(document.createElement('div'));
+                   //
+                   //     service.getDetails({
+                   //         placeId: placeId,
+                   //         fields: ['reviews']
+                   //     }, (place, status) => {
+                   //         if (status === google.maps.places.PlacesServiceStatus.OK) {
+                   //             const reviewsContainer = document.getElementById('reviews');
+                   //             const allReviews = place.reviews; // Get all reviews without filtering
+                   //             if (allReviews.length > 0) { // Check if there are any reviews
+                   //                 allReviews.forEach((review) => {
+                   //                     const reviewElement = document.createElement('div');
+                   //                     reviewElement.className = 'review';
+                   //                     const reviewDate = new Date(review.time * 1000).toLocaleDateString();
+                   //                     const limitedText = review.text.length > 120 ? review.text.substring(0, 120) + '...' : review.text;
+                   //                     reviewElement.innerHTML = `
+                   //         <div class="col-md-4">
+                   //             <img src="${review.profile_photo_url || ''}" alt="${review.author_name}'s photo" class="img-fluid rounded mx-auto d-block">
+                   //         </div>
+                   //         <div class="col-md-8 align-bottom">
+                   //             <h4>${review.author_name}</h4>
+                   //         </div>
+                   //         <div class="col-md-12">
+                   //             <div class="rating">${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}</div>
+                   //             <p><em>${reviewDate}</em></p>
+                   //             <p>${limitedText}</p>
+                   //         </div>
+                   //     `;
+                   //                     reviewsContainer.appendChild(reviewElement);
+                   //                 });
+                   //
+                   //                 // Initialize Slick Carousel
+                   //                 $('.review-carousel').slick({
+                   //                     infinite: true,
+                   //                     slidesToShow: 3,
+                   //                     slidesToScroll: 1,
+                   //                     autoplay: true,
+                   //                     autoplaySpeed: 2000,
+                   //                     dots: true,
+                   //                     arrows: true,
+                   //                     prevArrow: $('.slick-prev'),
+                   //                     nextArrow: $('.slick-next'),
+                   //                     responsive: [
+                   //                         {
+                   //                             breakpoint: 768, // Breakpoint for tablets and below
+                   //                             settings: {
+                   //                                 slidesToShow: 1 // Show 1 slide on tablets and below
+                   //                             }
+                   //                         }
+                   //                     ]
+                   //                 });
+                   //             } else {
+                   //                 console.log('No reviews available for this place.');
+                   //             }
+                   //         } else {
+                   //             console.error('Error fetching reviews:', status);
+                   //         }
+                   //     });
+                   // }
+                   document.addEventListener('DOMContentLoaded', fetchGoogleReviews);
+               </script>
+           </div>
+           </div>
+       </div>-->
+    <div class="services iconic white">
+        <div class="wrap">
+            <div class="row">
+                <!--- Content -->
+                <div class="textwidget">
+                    <div class="row">
+                        <div class="col-md-12  wow fadeIn" style="padding: 20px 0 20px 0px;">
+                            <img class="mx-auto d-block" alt="Nos véhicules" src="https://votrechauffeur.ma/assets/images/n_vehicules.png" style="height: 200px;">
+
+                        </div>
+                        <div class="col-xs-4">
+                            <img class="mx-auto d-block wow fadeInDown" alt="Berline" src="https://votrechauffeur.ma/assets/images/ico_berline.png" style="width: 200px;">
+                        </div>
+                        <div class="col-xs-4">
+                            <img class="mx-auto d-block wow fadeInDown" alt="VAN silver" src="https://votrechauffeur.ma/assets/images/ico_vansilver.png" style="width: 200px;">
+
+                        </div>
+                        <div class="col-xs-4">
+                            <img class="mx-auto d-block wow fadeInDown" alt="VAN gold" src="https://votrechauffeur.ma/assets/images/ico_vangold.png" style="width: 200px;">
+
+                        </div>
+
+                    </div>
+
+                    <br><br>
+                    <div class="row">
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-md-6">
+                            <img class="mx-auto d-block wow fadeInDown" alt="Besoin d’une Berline haut de gamme ?" src="https://votrechauffeur.ma/assets/images/bull_1.png" style="width: 80%;">
+                        </div>
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-md-6">
+                            <img class="mx-auto d-block wow fadeInDown" alt="Besoin d’un transfert avec un temps de trajet garanti ?" src="https://votrechauffeur.ma/assets/images/bull_2.png" style="width: 80%;">
+
+                        </div>
+                        <div class="col-md-6">
+                            <img class="mx-auto d-block wow fadeInDown" alt="Vous êtes plus de 4 personnes pour un transfert vers une gare ou un aéroport ?" src="https://votrechauffeur.ma/assets/images/bull_3.png" style="width: 80%;">
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="row text-center text-justify wow fadeIn animated" style="border: 6px solid #fcc803;
+border-radius: 40px;">
+
+                        <h2 style="
+    margin: 0 25px 0 25px;
+"><br><strong>VotreChauffeur.ma</strong> vous propose une large gamme de véhicules pour répondre à l’ensemble de vos besoins de transport en <strong>Vtc</strong></h2>
+                    </div>
+                </div>
+                <!--- //Content -->
+            </div>
+        </div>
+    </div>
+    <div class="black cta">
+        <div class="wrap text-center text-justify">
+            <p class="wow fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">Faites nous part de vos exigences, nous répondons
+                par les services et l'expertise nécessaire !</p>
+        </div>
+    </div>
+
+    <div class="services iconic white">
+        <div class="wrap">
+            <div class="row">
+                <div class="col-md-12  wow fadeIn" style="padding: 20px 0 20px 0px;">
+                    <img class="mx-auto d-block" alt="Disponible plusieurs villes" src="https://votrechauffeur.ma/assets/images/plusieurs_ville.png" style="height: 200px;">
+
+                </div>
+
+                <div class="col-md-12">
+
+                    <img class="mx-auto d-block wow fadeIn animated" alt="Disponible dans plusieurs villes" src="https://votrechauffeur.ma/assets/images/carte_vtc3.png" style="width: 100%;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="testimonials center black" style="background: url(https://votrechauffeur.ma/assets/images/image10.jpg) 100% 0% no-repeat;background-size: 100%;">
+        <div class="wrap">
+
+            <!--            <h1 class="wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">Types de coures</h1>-->
+            <!--            <br>-->
+            <br>
+            <div class="row">
+                <div class="col-md-12  wow fadeIn" style="padding: 20px 0 20px 0px;">
+                    <img class="mx-auto d-block" alt="Types de coures" src="https://votrechauffeur.ma/assets/images/type_course.png" style="height: 200px;">
+
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <img class="mx-auto d-block  wow fadeInLeft" alt="Déplacements intra-villes" src="https://votrechauffeur.ma/assets/images/type_1.png" style="width: 100%;">
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <img class="mx-auto d-block wow fadeIn animated" alt="Excursions, circuits touristiques ou mise à disposition" src="https://votrechauffeur.ma/assets/images/type_2.png" style="width: 100%;">
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <img class="mx-auto d-block wow fadeIn animated" alt="Transferts aéroports" src="https://votrechauffeur.ma/assets/images/type_3.png" style="width: 100%;">
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <img class="mx-auto d-block wow fadeInRight" alt="Transferts inter-ville" src="https://votrechauffeur.ma/assets/images/type_4.png" style="width: 100%;">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="services iconic white">
+        <div class="wrap">
+            <div class="row text-center" >
+                <!-- Item -->
+                <div class="col-md-12  wow fadeIn" style="padding: 20px 0 20px 0px;">
+                    <img class="mx-auto d-block" alt="service" src="https://votrechauffeur.ma/assets/images/services_bord.png" style="height: 200px;">
+
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6  wow fadeIn" style="padding: 20px 0 20px 0px;">
+                    <img class="mx-auto d-block" alt="Presse écrite" src="https://votrechauffeur.ma/assets/images/ico_press.png" style="width: 50%;">
+                    <span>Presse écrite                    </span>
+                    <p>(journaux, magazines)</p>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 wow fadeIn" style="padding: 20px 0 20px 0px;">
+                    <img class="mx-auto d-block" alt="Des chauffeurs attentionnés
+                        et bienveillants" src="https://votrechauffeur.ma/assets/images/ico_chauffeurs.png" style="width: 50%;">
+                    <span>Des chauffeurs attentionnés
+                        et bienveillants                    </span>
+                    <p></p>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 wow fadeIn" style="padding: 20px 0 20px 0px;">
+                    <img class="mx-auto d-block" alt="Accueil avec pancarte" src="https://votrechauffeur.ma/assets/images/ico_pancarte.png" style="width: 50%;">
+                    <span>Accueil avec pancarte</span>
+                    <p></p>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 wow fadeIn" style="padding: 20px 0 20px 0px;">
+                    <img class="mx-auto d-block" alt="Discrétion et confidentialité" src="https://votrechauffeur.ma/assets/images/ico_discret.png" style="width: 50%;">
+                    <span>Discrétion et confidentialité</span>
+                    <p></p>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 wow fadeIn" style="padding: 20px 0 20px 0px;">
+                    <img class="mx-auto d-block" alt="Prise en compte d'éventuels retards" src="https://votrechauffeur.ma/assets/images/ico_retard.png" style="width: 50%;">
+                    <span>Prise en compte d'éventuels retards</span>
+                    <p></p>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 wow fadeIn" style="padding: 20px 0 20px 0px;">
+                    <img class="mx-auto d-block" alt="Chargeur de téléphone" src="https://votrechauffeur.ma/assets/images/ico_chargeur.png" style="width: 50%;">
+                    <span>Chargeur de téléphone</span>
+                    <p></p>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 wow fadeIn" style="padding: 20px 0 20px 0px;">
+                    <img class="mx-auto d-block" alt="Wifi accessible" src="https://votrechauffeur.ma/assets/images/ico_wifi.png" style="width: 50%;">
+                    <span>Wifi accessible</span>
+                    <p></p>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 wow fadeIn" style="padding: 20px 0 20px 0px;">
+                    <img class="mx-auto d-block" alt="Parapluie" src="https://votrechauffeur.ma/assets/images/ico_parapluie.png" style="width: 50%;">
+                    <span>Parapluie</span>
+                    <p></p>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 wow fadeIn" style="padding: 20px 0 20px 0px;">
+                    <img class="mx-auto d-block" alt="Bouteilles d'eau" src="https://votrechauffeur.ma/assets/images/ico_eau.png" style="width: 50%;">
+                    <span>Bouteilles d'eau</span>
+                    <p></p>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6  wow fadeIn" style="padding: 20px 0 20px 0px;">
+                    <img class="mx-auto d-block" alt="Choix d'ambiance" src="https://votrechauffeur.ma/assets/images/ico_ambiance.png" style="width: 50%;">
+                    <span>Choix d'ambiance</span>
+                    <p></p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+        function centerModal() {
+            $(this).css('display', 'block');
+            var $dialog = $(this).find(".modal-dialog");
+            var offset = ($(window).height() - $dialog.height()) / 2;
+            // Center modal vertically in window
+            $dialog.css("margin-top", offset);
+        }
+
+        $('.modal').on('show.bs.modal', centerModal);
+        $(window).on("resize", function () {
+            $('.modal:visible').each(centerModal);
+        });
+
+        window.mobileAndTabletcheck = function() {
+            var check = false;
+            (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))
+                check = true})(navigator.userAgent||navigator.vendor||window.opera);
+            return check;
+        }
+
+
+
+        $(document).ready(function(){
+
+
+
+            if (window.mobileAndTabletcheck() == false){
+                $('#promo').click();
+            }
+
+
+        });
+
+        $(".btn-next").click(function() {
+            $('#modal-container').animate({
+                'margin-left': '-=100%'
+            }, 400);
+        });
+
+        $(".btn-back").click(function() {
+            $('#modal-container').animate({
+                'margin-left': '+=100%'
+            }, 400);
+        });
+    </script>
+
+    <button type="button" id="promo" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="display: none;">Popup image</button>
+</main>
+<!-- //Main -->
+                                </div>
+                                <div class="col-md-0 wid2 oranomarge"  id="wid2" >
+                                                                </div>
+
+        </div>
+
+
+</main>
+
+
+<!-- Footer -->
+<footer class="footer black" role="contentinfo">
+    <div class="wrap">
+
+
+        <div class=" center">
+            <div class="wrap">
+                <h2 class="wow fadeIn"
+                    style="padding-bottom: 0px;padding-top: 10px;">NOS PARTENAIRES </h2>
+                <hr>
+                <div class="col-xs-6  wow fadeIn"><img src="https://votrechauffeur.ma/assets/images/booking.png" alt=""
+                                                       style="width: 200px;"/></div>
+                <div class="col-xs-6  wow fadeIn" data-wow-delay=".2s"><img
+                            src="https://votrechauffeur.ma/assets/images/avis.png" alt="" style="width: 200px;"/></div>
+
+            </div>
+        </div>
+        <div class="row">
+            <!-- Column -->
+            <article class="one-half">
+                <h6>Siège social et informations juridiques :</h6>
+                <hr>
+                <p>WibJaz SARL, WibTrip SARL 203 Bd Zerktouni, Maarif, Casablanca <br>
+                    Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="33405641455a5056505f5a565d4773455c474156505b524655555646411d5e52">[email&#160;protected]</a><br>
+                    N° Autorisation de transport touristique: TT/12429-33/2014<br>
+                    N° Autorisation du Call Center: ANRT/SVA/N°012249<br>
+                    Autorisation CNDP N° : D-GC-434/2020 (Inscription et gestion des réservations de transfert des clients)<br>
+                    Autorisation CNDP N° : D-M-435/2020 (Marketing et prospection commerciale)</p>
+
+                <h6>Paiement sécurisé :</h6>
+                <hr>
+
+                <p>
+                <div class="row">
+                <ul class="partenaires_cyberesa">
+                    <li><img src="https://votrechauffeur.ma/assets/images/logo_footer_1_0.png" alt="Visa" border="0">
+                    </li>
+                    <li><img src="https://votrechauffeur.ma/assets/images/logo_footer_2_0.png" alt="MasterCard"
+                             border="0"></li>
+                    <!--<li><a href="http://www.maroctelecommerce.com/securite-paiement.html" target="_blank"><img src="imgs/logo_footer_3.png" alt="Paiement sécurisé" border="0"></a></li>
+                    <li><a href="http://www.maroctelecommerce.com/cardauth.php"><img src="imgs/logo_footer_4.png" alt="True" border="0" target="_blank"></a></li>-->
+                    <li><img src="https://votrechauffeur.ma/assets/images/logo_footer_5_0.png" alt="centre" border="0">
+                    </li>
+                    <li><img src="https://votrechauffeur.ma/assets/images/logo_footer_6_0.png" alt="MTC" border="0"></li>
+                    <li><img width="45" height="31"
+                             src="https://votrechauffeur.ma/assets/images/tn_verified_by_visa_petit_0.jpg"
+                             alt="verified_by_visa" border="0"></li>
+                    <li><img width="45" height="31"
+                             src="https://votrechauffeur.ma/assets/images/secure_code_logo_petit_0.png"
+                             alt="Master_secure_code" border="0"></li>
+                </ul>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="TA_cdswritereviewlgvi130" class="TA_cdswritereviewlgvi">
+                            <ul id="CGNVQ4tyc" class="TA_links tPq3Fdiyk">
+                                <li id="19EovOBr" class="nfegYrOgc9d">
+                                    <a target="_blank" href="https://www.tripadvisor.fr/"><img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="TripAdvisor"/></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async src="https://www.jscache.com/wejs?wtype=cdswritereviewlgvi&amp;uniq=130&amp;locationId=7812272&amp;lang=fr&amp;lang=fr&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+
+
+                    </div>
+                    <div class="col-md-6">
+                        <div id="TA_excellent28" class="TA_excellent"><ul id="FaGXlKJh" class="TA_links WgorJOGAg"><li id="0GEsP8syL" class="rmNpRcPQ"><a target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g293732-d7812272-Reviews-VotreChaffeur_ma-Casablanca_Casablanca_Settat.html"><img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="TripAdvisor" class="widEXCIMG" id="CDSWIDEXCLOGO"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=excellent&amp;uniq=28&amp;locationId=7812272&amp;lang=en_US&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+
+                    </div>
+                 </div>
+                </p>
+            </article>
+            <!-- //Column -->
+
+
+            <!-- Column -->
+            <article class="one-half">
+                <h6>RÉSEAUX SOCIAUX ET APPLICATIONS :</h6>
+                <hr>
+                <ul class="social">
+                    <!--<li><a target="_blank" href="https://www.youtube.com/channel/UC3YOV_asrcNi3tT8hYl124A" title="youtube"><i class="fab fa-youtube"></i></a></li>-->
+                    <li><a target="_blank" href="https://www.facebook.com/votrechauffeur.ma" title="facebook"><i
+                                    class="fab fa-facebook-f"></i></a></li>
+                    <li><a target="_blank" href="https://twitter.com/votre_chauffeur" title="twitter"><i
+                                    class="fab fa-twitter"></i></a></li>
+                    <!--<li><a target="_blank" href="https://plus.google.com/103685614672847360691/about" title="gplus"><i class="fab fa-google-plus-g"></i></a></li>-->
+                    <li><a target="_blank"
+                           href="https://www.linkedin.com/company/9253586?trk=tyah&trkInfo=clickedVertical%3Acompany%2Cidx%3A1-1-1%2CtarId%3A1433254766711%2Ctas%3Avotrechauffeur.ma"
+                           title="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a target="_blank" href="https://instagram.com/votrechauffeur.ma/" title="instagram"><i
+                                    class="fab fa-instagram"></i></a></li>
+                    <li><a target="_blank" href="https://www.youtube.com/channel/UCZBDDI8ARplhGSXm9E7GxOw"
+                           title="youtube"><i class="fab fa-youtube"></i></a></li>
+
+                </ul>
+
+                <h6>PLUS D'INFOS</h6>
+                <hr>
+                <p>
+                <ul class="succursales">
+
+
+                                            <!-- <li><a href="services.php"><span style="cursor:pointer">Qui sommes-nous?</span></a></li> -->
+                        <li><a href="https://votrechauffeur.ma/onparledenous" style="color:  white;"><span>On parle de nous !</span></a>
+                        </li>
+                        <li><a href="https://votrechauffeur.ma/taxi-vert-casablanca" style="color:  white;"><span>Taxi à Casablanca</span></a>
+                        </li>
+                        <li><a href="https://votrechauffeur.ma/navettecasablanca" style="color:  white;"><span>Navette Aéroport Casablanca</span></a>
+                        </li>
+                        <li><a href="https://votrechauffeur.ma/chauffeur-prive-casablanca" style="color:  white;"><span>Chauffeur privé Casablanca</span></a>
+                        </li>
+                        <li><a href="https://votrechauffeur.ma/chauffeur-prive-marrakech" style="color:  white;"><span>Chauffeur privé Marrakech</span></a>
+                        </li>
+                        <li><a href="https://votrechauffeur.ma/chauffeur-prive-rabat" style="color:  white;"><span>Chauffeur privé Rabat</span></a>
+                        </li>
+                        <li><a href="https://votrechauffeur.ma/chauffeur-prive-agadir" style="color:  white;"><span>Chauffeur privé Agadir</span></a>
+                        </li>
+                        <li><a href="https://votrechauffeur.ma/chauffeur-prive-fes" style="color:  white;"><span>Chauffeur privé Fés</span></a>
+                        </li>
+                        <li><a href="https://votrechauffeur.ma/chauffeur-prive-tanger" style="color:  white;"><span>Chauffeur privé Tanger</span></a>
+                        </li>
+                        <li><a href="https://votrechauffeur.ma/transport-touristique-marrakech"
+                               style="color:  white;"><span>Transport Touristique Marrakech</span></a></li>
+                        <li><a href="https://votrechauffeur.ma/transport-touristique-casablanca"
+                               style="color:  white;"><span>Transport touristique Casablanca</span></a></li>
+                        <li><a href="https://votrechauffeur.ma/transport-touristique-rabat" style="color:  white;"><span>Transport touristique Rabat</span></a>
+                        </li>
+                        <li><a href="https://votrechauffeur.ma/navette-aeroport-marrakech" style="color:  white;"><span>Navette Aéroport Marrakech</span></a>
+                        <li><a href="https://votrechauffeur.ma/navette-aeroport-tanger" style="color:  white;"><span>Navette Aéroport Tanger</span></a>
+                        <li><a href="https://votrechauffeur.ma/navette-aeroport-agadir" style="color:  white;"><span>Navette Aéroport Agadir</span></a>
+                        <li><a href="https://votrechauffeur.ma/navette-aeroport-fes" style="color:  white;"><span>Navette Aéroport Fés</span></a>
+                        <li><a href="https://votrechauffeur.ma/navette-aeroport-rabat" style="color:  white;"><span>Navette Aéroport Rabat</span></a>
+                        <li><a href="https://votrechauffeur.ma/votre-application-taxi-marrakech" style="color:  white;"><span>Votre Application Taxi à Marrakech</span></a>
+                        <li><a href="https://votrechauffeur.ma/votre-application-taxi-casablanca" style="color:  white;"><span>Votre Application Taxi à Casablanca</span></a>
+                        <li><a href="https://votrechauffeur.ma/votre-application-taxi-rabat" style="color:  white;"><span>Votre Application Taxi à Rabat</span></a>
+                        <li><a href="https://votrechauffeur.ma/votre-application-taxi-tanger" style="color:  white;"><span>Votre Application Taxi à Tanger</span></a>
+                        <li><a href="https://votrechauffeur.ma/votre-application-taxi-agadir" style="color:  white;"><span>Votre Application Taxi à Agadir</span></a>
+
+
+                        <li><a href="https://votrechauffeur.ma/recrutement" style="color:  white;"><span>Recrutement Chauffeur privé</span></a>
+                        </li>
+                        <!--    <li><a href="services.php#contactservice"><span>Contactez-nous</span></a></li> -->
+                                    </ul>
+                </p>
+            </article>
+            <!-- //Column -->
+        </div>
+
+        <div class="copy">
+            <p>© 2010-2025 Wib.co</p>
+
+
+        </div>
+    </div>
+</footer>
+<!-- //Footer -->
+
+<!-- Preloader
+        <div class="preloader">
+                <div id="followingBallsG">
+                        <div id="followingBallsG_1" class="followingBallsG"><img src="https://votrechauffeur.ma/assets/images/logo-folded.png" alt="user-image" class="img-circle img-inline"></div>
+                        <div id="followingBallsG_2" class="followingBallsG"><img src="https://votrechauffeur.ma/assets/images/logo-folded.png" alt="user-image" class="img-circle img-inline"></div>
+                        <div id="followingBallsG_3" class="followingBallsG"><img src="https://votrechauffeur.ma/assets/images/logo-folded.png" alt="user-image" class="img-circle img-inline"></div>
+                        <div id="followingBallsG_4" class="followingBallsG"><img src="https://votrechauffeur.ma/assets/images/logo-folded.png" alt="user-image" class="img-circle img-inline"></div>
+                </div>
+        </div>
+        <!-- //Preloader -->
+
+
+
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+    <script src="https://votrechauffeur.ma/assets/rh/plugins/datatables/js/jquery.dataTables.min.js"
+            type="text/javascript"></script>
+    <script src="https://votrechauffeur.ma/assets/rh/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js"
+            type="text/javascript"></script>
+    <script src="https://votrechauffeur.ma/assets/rh/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"
+            type="text/javascript"></script>
+    <script src="https://votrechauffeur.ma/assets/rh/plugins/datatables/extensions/Responsive/bootstrap/3/dataTables.bootstrap.js"
+            type="text/javascript"></script>
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://votrechauffeur.ma/assets/ora/app.js"></script>
+    <script src="https://votrechauffeur.ma/assets/js/jquery.datetimepicker.js"></script>
+    <script src="https://votrechauffeur.ma/assets/js/jquery.slicknav.min.js"></script>
+
+    <script src="https://votrechauffeur.ma/assets/js/jquery.uniform.min.js"></script>
+<script src="https://votrechauffeur.ma/assets/js/wow.min.js"></script>
+
+<script src="https://votrechauffeur.ma/assets/js/scripts.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://votrechauffeur.ma/assets/TwbsToggleButtons.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-53589262-1"></script>
+
+<script>
+    $('input').keypress(function (e) {
+        var key = e.which;
+        if (key == 13)
+            // the enter key code
+        {
+            $('.xxx').click();
+        }
+    });
+</script>
+
+<!-- Include jQuery -->
+
+<!-- Include jQuery Validator plugin -->
+
+<!-- Include SmartWizard JavaScript source -->
+
+
+</body>
 </html>
+C:\Users\diakh>
