@@ -26,14 +26,29 @@
                 background-color: #603E1B;
                 color: #fff;
                 border-radius: 5px;
-                padding: 5px;
+               
+            }
+            .nav-item{
+               padding: 5px;
+               
             }
             .nav-item:hover{
                font-weight: bold;
                 background-color: #603E1B;
                 color: #fff;
                 border-radius: 5px;
-                padding: 5px;
+               
+            }
+            /* li */
+            .nav-item{
+              margin: 5px;
+            }
+            #navbarDropdownShop ul li a:hover{
+               font-weight: bold;
+                background-color: #603E1B;
+                color: #fff;
+                border-radius: 5px;
+               
             }
          </style>
     </head>
@@ -46,19 +61,33 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">FAQ</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#!">FAQ</a></li> -->
                         <li class="nav-item"><a class="nav-link" href="#!">Qui sommes nous</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                        <li class="nav-item dropdown" id="navbarDropdownShop">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">BOUTIQUE</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">All Products</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Homme</a></li>
-                                <li><a class="dropdown-item" href="#!">Femme</a></li>
+                                <!-- <li><a class="dropdown-item" href="#!">All Products</a></li> -->
+                                <li>
+                                    <a class="dropdown-item" href="#!" style="font-weight: bold;">Homme</a>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#!">Grand Boubou</a></li>
+                                        <li><a class="dropdown-item" href="#!">Deux pièces</a></li>
+                                        <li><a class="dropdown-item" href="#!">Chemise Africaine</a></li>
+                                        <li><a class="dropdown-item" href="#!">costume Africaine</a></li>
+                                    </ul>
+                                </li>
+                                 <li><hr class="dropdown-divider" /></li>
+                                <li>
+                                    <a class="dropdown-item" href="#!" style="font-weight: bold;">Femme</a>
+                                    <ul>
+                                        <li><a class="dropdown-item" href="#!">Robe</a></li>
+                                        <li><a class="dropdown-item" href="#!">Tunique</a></li>
+                                        <li><a class="dropdown-item" href="#!">Taille_Basse</a></li>                                       
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
                     </ul>
                     
                 </div>
