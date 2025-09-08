@@ -1,0 +1,45 @@
+/* Style au survol des liens de navigation */
+            .nav-link:hover{
+                font-weight: bold;
+                background-color: #603E1B;
+                color: #fff;
+                border-radius: 5px;
+               
+            }
+            .nav-item{
+               padding: 5px;
+               
+            }
+            .nav-item:hover{
+               font-weight: bold;
+                background-color: #603E1B;
+                color: #fff;
+                border-radius: 5px;
+               
+            }
+            /* li */
+            .nav-item{
+              margin: 5px;
+            }
+            #navbarDropdownShop ul li a:hover{
+               font-weight: bold;
+                background-color: #603E1B;
+                color: #fff;
+                border-radius: 5px;
+               
+            }
+            /* footer{
+               background-color: #603E1B;
+               color: #000 !important;
+               padding: 20px 0;
+               text-align: center;
+               margin-top: 20px;
+            } */
+
+            footer .col-4 ul li a {
+             
+               color: #000 !important;
+               text-align: center;
+               font-weight: lighter;
+               margin-top: 20px;
+            }
